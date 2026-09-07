@@ -1,0 +1,19 @@
+# Terraform state and plans — contain resource attribute values, including
+# admin passwords in plaintext (sensitive=true only hides CLI output, not state)
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate
+*.tfstate.*
+*.plan
+.terraform/
+.terraform.lock.hcl.bak
+
+# Never commit local secrets / env loaders' output
+*.env
+.env*
+
+# Logical backups — binary dumps, not meaningful to publish
+backups/
+
+# OS
+.DS_Store
